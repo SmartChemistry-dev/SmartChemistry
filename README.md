@@ -1,1 +1,1 @@
-# smartChemistry
+# SmartChemistry
