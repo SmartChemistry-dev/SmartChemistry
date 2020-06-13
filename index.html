@@ -16,6 +16,13 @@
   <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
   <!-- Core theme CSS (includes Bootstrap)-->
   <link href="css/styles.css" rel="stylesheet" />
+  <style>
+      /* Set the size of the div element that contains the map */
+     #map {
+       height: 400px;  /* The height is 400 pixels */
+       width: 100%;  /* The width is the width of the web page */
+      }
+   </style>
 </head>
 
 <body id="page-top">
@@ -211,6 +218,26 @@
     </div>
 
   </section>
+  <section>
+   <!--The div element for the map -->
+   <div id="map"></div>
+   <script>
+// Initialize and add the map
+function initMap() {
+ // The location of Uluru
+ var mirijevac = {lat: 44.806185, lng: 20.524376};
+ // The map, centered at Uluru
+ var map = new google.maps.Map(
+     document.getElementById('map'), {zoom: 4, center: mirijevac});
+ // The marker, positioned at Uluru
+ var marker = new google.maps.Marker({position: mirijevac, map: map});
+}
+   </script>
+   <script async defer
+  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBG_mCV3rEQGyu7UWpAeE2XUXqo7t_qL_U&callback=initMap">
+</script>
+
+ </section>
 
   <!-- Contact Section-->
 
@@ -493,6 +520,10 @@
   <script src="assets/mail/contact_me.js"></script>
   <!-- Core theme JS-->
   <script src="js/scripts.js"></script>
+  <script type="text/javascript">
+
+
+
 </body>
 
 </html>
