@@ -339,6 +339,10 @@ progress {
   outline-offset: -2px;
   -webkit-appearance: none;
 }
+em {
+  font-weight: normal;
+  font-size: 13px;
+}
 
 [type=search]::-webkit-search-decoration {
   -webkit-appearance: none;
